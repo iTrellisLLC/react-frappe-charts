@@ -1,4 +1,4 @@
-/// <reference types="react" />
+import React from "react";
 declare type ChartType = "line" | "bar" | "axis-mixed" | "pie" | "percentage" | "heatmap";
 declare type AxisMode = "span" | "tick";
 declare type ChartData = {
@@ -48,5 +48,5 @@ declare type Props = {
     maxSlices?: number;
     onDataSelect?: (event: SelectEvent) => void;
 };
-export default function ReactFrappeChart(props: Props): JSX.Element;
-export {};
+declare const ReactFrappeChart: React.ForwardRefExoticComponent<Props & React.RefAttributes<unknown>>;
+export default ReactFrappeChart;
